@@ -1,0 +1,21 @@
+"use strict";
+
+var runners = require("./src");
+
+/**
+ * Given a string, return it reversed.
+ *
+ * Example: reverse('hello') => 'olleh'
+ *
+ * @param {string} str
+ * @return {string}
+ */
+function reverse(str) {
+  // Write your solution here
+}
+
+if (require.main === module) {
+  runners.reverse(reverse);
+}
+
+module.exports = reverse;
