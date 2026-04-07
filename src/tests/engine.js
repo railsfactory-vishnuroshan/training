@@ -37,6 +37,11 @@ function runTests(solutionFn, testCases) {
       testCases.length +
       " tests.",
   );
+
+  // throw error if any test failed
+  if (failed > 0) {
+    throw new Error(failed + " tests failed.");
+  }
 }
 
 module.exports = runTests;

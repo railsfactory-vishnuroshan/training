@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Current Problem",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug Problem (Pick File)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/problems/${input:problem}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "problem",
+      "type": "pickString",
+      "description": "Choose a problem to debug",
+      "options": [
+        "maxConsecutiveOnes.js",
+        "missingNumber.js",
+        "containsDuplicate.js",
+        "removeDuplicates.js",
+        "productExceptSelf.js",
+        "reverse.js",
+        "validPalindrome.js",
+        "longestCommonPrefix.js",
+        "defangIPAddress.js",
+        "firstUniqueChar.js",
+        "twoSum.js",
+        "majorityElement.js",
+        "validAnagram.js",
+        "jewelsAndStones.js",
+        "ransomNote.js",
+        "customFilter.js",
+        "closureCounter.js",
+        "getType.js",
+        "sleep.js",
+        "flattenObject.js"
+      ]
+    }
+  ]
+}

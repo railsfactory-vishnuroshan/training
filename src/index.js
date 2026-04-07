@@ -122,6 +122,9 @@ module.exports = {
         sleepData.length +
         " tests.",
     );
+    if (failed > 0) {
+      throw new Error(failed + " tests failed.");
+    }
   },
   flattenObject: function (solutionFn) {
     runTests(solutionFn, flattenObjectData);
