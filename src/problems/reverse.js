@@ -1,6 +1,6 @@
 "use strict";
 
-var runners = require("./src");
+var runners = require("..");
 
 /**
  * Given a string, return it reversed.

@@ -1,6 +1,6 @@
 "use strict";
 
-var runners = require("./src");
+var runners = require("..");
 
 /**
  * Given an array of numbers and a target sum, return the indices of the two

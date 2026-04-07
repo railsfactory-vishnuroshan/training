@@ -1,0 +1,10 @@
+"use strict";
+
+var missingNumberCases = [
+  { input: [[3, 0, 1]], expected: 2 },
+  { input: [[0, 1]], expected: 2 },
+  { input: [[9, 6, 4, 2, 3, 5, 7, 0, 1]], expected: 8 },
+  { input: [[0]], expected: 1 },
+];
+
+module.exports = missingNumberCases;
