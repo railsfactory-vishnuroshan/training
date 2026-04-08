@@ -5,8 +5,8 @@
 const user = {
   name: "Alice",
   greet: function () {
-    console.log("Hello, my name is " + this.name);
+    console.log("Hello, my name is " + this.name.toString());
   },
 };
 
-setTimeout(user.greet, 1000); // Expected output is "Alice"
+setTimeout(()=>user.greet(), 1000); // Expected output is "Alice"
