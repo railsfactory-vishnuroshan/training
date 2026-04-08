@@ -13,7 +13,15 @@ var runners = require("..");
  * @return {number}
  */
 function jewelsAndStones(jewels, stones) {
-  // Write your solution here
+  const jewelSet = new Set(jewels);
+  let count = 0;
+
+  for(let stone of stones){
+    if(jewelSet.has(stone)){
+      count++;
+    }
+  }
+  return count;
 }
 
 if (require.main === module) {
