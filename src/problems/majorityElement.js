@@ -12,6 +12,20 @@ var runners = require("..");
  */
 function majorityElement(nums) {
   // Write your solution here
+  let element = null;
+  let count = 0;
+  for (let num of nums) {
+    if (count === 0) {
+      element = num;
+    }
+
+    if (num === element) {
+      count++;
+    } else {
+      count--;
+    }
+  }
+  return element;
 }
 
 if (require.main === module) {
