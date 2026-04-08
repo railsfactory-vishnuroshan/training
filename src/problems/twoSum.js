@@ -14,6 +14,19 @@ var runners = require("..");
  */
 function twoSum(nums, target) {
   // Write your solution here
+
+  const tab = {};
+
+  for(let i=0;i<nums.length;i++){
+    const carry = target - nums[i];
+
+    if(tab[carry] !== undefined){
+      return [tab[carry],i] ;
+    }
+    tab[nums[i]] = i;
+  }
+
+
 }
 
 if (require.main === module) {

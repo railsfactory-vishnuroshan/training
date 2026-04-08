@@ -13,7 +13,43 @@ var runners = require("..");
  */
 function validPalindrome(s) {
   // Write your solution here
+  
+   if(!s ) {
+      return true;
+   }
+   let left = 0 ;
+   let right = s.length - 1;
+   while(left < right){
+
+    if(!isAlphanumeric(s[left]) ){
+      left++;
+      continue;
+    }
+    if(!isAlphanumeric(s[right])){
+      right--;
+      continue;
+    }
+
+    if(!isSameChar(s[left],s[right])){
+      return false;
+      
+    }
+    left++;
+    right--;
+
+   }
+   return true;
+
 }
+
+function isAlphanumeric(char){
+    const ch = char.toLowerCase();
+    return (ch >='a' && ch<='z') || (ch >= '0' && ch <='9');
+  }
+
+  function isSameChar(a,b){
+    return a.toLowerCase() === b.toLowerCase();
+  }
 
 if (require.main === module) {
   runners.validPalindrome(validPalindrome);
