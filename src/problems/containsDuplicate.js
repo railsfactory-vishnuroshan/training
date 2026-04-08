@@ -11,9 +11,15 @@ var runners = require("..");
  * @return {boolean}
  */
 function containsDuplicate(nums) {
-  
-}
   // Write your solution here
+  nums.sort((a,b) => a-b)
+  for (let i = 1;i<nums.length ;i++) {
+    if(nums[i]==nums[i-1])return true
+  
+  }
+  return false
+
+
 }
 
 if (require.main === module) {

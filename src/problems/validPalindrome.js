@@ -12,7 +12,10 @@ var runners = require("..");
  * @return {boolean}
  */
 function validPalindrome(s) {
-  // Write your solution here
+    let rev="";
+  for(let i=s.length-1; i>=0; --i)
+    rev+=s.charAt(i);
+  return rev==s;
 }
 
 if (require.main === module) {
