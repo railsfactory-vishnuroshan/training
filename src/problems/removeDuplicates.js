@@ -13,7 +13,15 @@ var runners = require("..");
  */
 function removeDuplicates(nums) {
   // Write your solution here
+  let a = nums.length;
+  for(var i = 0; i < nums.length; i++) {
+    if(nums[i] == nums[i+1]) {
+      a--;
+    }
+  }
+  return a;
 }
+
 
 if (require.main === module) {
   runners.removeDuplicates(removeDuplicates);
