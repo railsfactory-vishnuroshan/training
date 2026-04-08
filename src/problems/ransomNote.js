@@ -12,8 +12,20 @@ var runners = require("..");
  * @param {string} magazine
  * @return {boolean}
  */
-function ransomNote(ransomNote, magazine) {
-  // Write your solution here
+function ransomNote(ransomNote, magazine){
+  const countMap = {};
+
+  for (const char of magazine) {
+    countMap[char] = (countMap[char] || 0) + 1;
+  }
+
+  for (const char of ransomNote) {
+    if (!countMap[char]) return false;
+
+    countMap[char]--;
+  }
+
+  return true;
 }
 
 if (require.main === module) {

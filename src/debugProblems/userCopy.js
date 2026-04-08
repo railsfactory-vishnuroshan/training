@@ -8,7 +8,7 @@ const originalUsers = [
 ];
 
 function addNewUser(usersList, newUser) {
-  const copiedList = [...usersList]; // makes a shallow copy
+  const copiedList = usersList;
   copiedList.push(newUser);
   return copiedList;
 }
