@@ -12,7 +12,21 @@ var runners = require("..");
  * @return {number[]}
  */
 function productExceptSelf(nums) {
-  // Write your solution here
+    const len=nums.length;
+    const ans=new Array(len).fill(1);
+    let left=1;
+    for(let i=0;i<len;i++)
+    {
+        ans[i]=left;
+        left *=nums[i];
+    }
+    let right=1;
+    for(let j=len-1;j>=0;j--)
+    {
+       ans[j]*=right;
+       right *=nums[j];
+    }
+  return ans;
 }
 
 if (require.main === module) {

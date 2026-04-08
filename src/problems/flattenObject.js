@@ -12,7 +12,28 @@ var runners = require("..");
  * @return {Object}
  */
 function flattenObject(obj) {
-  // Write your solution here
+      let res={};
+      function helper(curr,pKey)
+      {
+        for(let key in curr)
+        {
+          let newKey=pKey?pKey+"."+key:key;
+          if(
+            typeof curr[key] === "object" &&
+            curr[key]!==null &&
+            !Array.isArray(curr[key])
+          )
+          {
+             helper(curr[key],newKey);
+          }
+          else
+          {
+              res[newKey] =curr[key];
+          }
+        }
+      }
+      helper(obj,"");
+      return res;
 }
 
 if (require.main === module) {
