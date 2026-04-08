@@ -8,7 +8,7 @@ async function processUsers() {
   //   userIds.forEach(async (id) => {
   for (let id of userIds) {
     // Simulating a 1 second API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     console.log("Processed user:", id);
     //   });
   }
