@@ -12,8 +12,28 @@ var runners = require("..");
  * @return {number}
  */
 function removeDuplicates(nums) {
+  nums.sort();
   // Write your solution here
+  if(nums.length === 1)
+  {
+    return 1;
+  }
+  let i=1, j=nums.length-1;
+  while(i<=j)
+  {
+     if(nums[i]===nums[i-1] || nums[i]<nums[i-1])
+     {
+       let temp = nums[j];
+       nums[j]=nums[i];
+       nums[i]=temp;
+       j--;
+     }
+     i++;
+  }
+  return j+1;
+
 }
+
 
 if (require.main === module) {
   runners.removeDuplicates(removeDuplicates);

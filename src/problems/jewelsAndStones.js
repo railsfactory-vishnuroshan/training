@@ -14,6 +14,20 @@ var runners = require("..");
  */
 function jewelsAndStones(jewels, stones) {
   // Write your solution here
+  let arr = new Array(256).fill(0);
+  let count =0;
+  for(let ind in stones)
+  {
+    arr[stones[ind].charCodeAt(0)]++;
+  }
+  for(let ind in jewels)
+  {
+    if(arr[jewels[ind].charCodeAt(0)] !== 0)
+    {
+      count+=arr[jewels[ind].charCodeAt(0)];
+    }
+  }
+  return count;
 }
 
 if (require.main === module) {
