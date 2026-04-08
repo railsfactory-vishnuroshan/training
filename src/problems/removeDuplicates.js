@@ -12,7 +12,15 @@ var runners = require("..");
  * @return {number}
  */
 function removeDuplicates(nums) {
-  // Write your solution here
+  if (nums.length === 0) return 0;
+  let writeInd = 1;
+  for (let readInd = 1; readInd < nums.length; readInd++) {
+    if (nums[readInd] !== nums[readInd - 1]) {
+      nums[writeInd] = nums[readInd];
+      writeInd++;
+    }
+  }
+  return writeInd;
 }
 
 if (require.main === module) {
