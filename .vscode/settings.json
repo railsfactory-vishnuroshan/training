@@ -1,5 +1,5 @@
 {
   // Do not change this setting!
-  "chat.disableAIFeatures": false,
+  "chat.disableAIFeatures": true,
   "editor.inlineSuggest.enabled": false
 }
