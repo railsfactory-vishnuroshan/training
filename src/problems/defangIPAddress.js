@@ -12,6 +12,15 @@ var runners = require("..");
  */
 function defangIPAddress(address) {
   // Write your solution here
+  let result = "";
+  for (let char of address) {
+    if (char === ".") {
+      result += "[.]";
+    } else {
+      result += char;
+    }
+  }
+  return result;
 }
 
 if (require.main === module) {
