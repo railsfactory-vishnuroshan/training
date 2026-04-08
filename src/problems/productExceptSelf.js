@@ -13,6 +13,7 @@ var runners = require("..");
  */
 function productExceptSelf(nums) {
   // Write your solution here
+  
 }
 
 if (require.main === module) {
