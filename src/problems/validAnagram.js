@@ -13,7 +13,14 @@ var runners = require("..");
  */
 function validAnagram(s, t) {
   // Write your solution here
+  const a = s.split("").sort().join("");
+  const b = t.split("").sort().join("");
+  if(a === b) {
+    return true;
+  }
+  return false;
 }
+
 
 if (require.main === module) {
   runners.validAnagram(validAnagram);
