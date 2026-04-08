@@ -12,6 +12,13 @@ var runners = require("..");
  */
 function containsDuplicate(nums) {
   // Write your solution here
+  const check=new Set();
+    for(let n of nums){
+      if(check.has(n))
+          return true;
+      check.add(n);  
+    }
+    return false;
 }
 
 if (require.main === module) {
