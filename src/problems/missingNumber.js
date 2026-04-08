@@ -11,7 +11,7 @@ var runners = require("..");
  * @return {number}
  */
 function missingNumber(nums) {
-  // Write your solution heregit 
+  // Write yoursolution here
 }
 
 if (require.main === module) {
