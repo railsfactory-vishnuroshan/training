@@ -11,7 +11,16 @@ var runners = require("..");
  * @return {number}
  */
 function missingNumber(nums) {
-  // Write your solution here
+  var sum=0;
+  var sum1=0;
+  for (var i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    sum1 += i; 
+  }
+  sum1 += nums.length;
+
+  return sum1 - sum;
+
 }
 
 if (require.main === module) {
