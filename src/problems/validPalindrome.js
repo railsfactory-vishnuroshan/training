@@ -12,10 +12,11 @@ var runners = require("..");
  * @return {boolean}
  */
 function validPalindrome(s) {
+  let new_s=s.replace(/[^a-z0-9]/gi, "").toLowerCase();
     let rev="";
-  for(let i=s.length-1; i>=0; --i)
-    rev+=s.charAt(i);
-  return rev==s;
+  for(let i=new_s.length-1; i>=0; --i)
+    rev+=new_s.charAt(i);
+  return rev==new_s;
 }
 
 if (require.main === module) {
