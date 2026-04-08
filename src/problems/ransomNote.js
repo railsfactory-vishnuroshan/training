@@ -13,7 +13,18 @@ var runners = require("..");
  * @return {boolean}
  */
 function ransomNote(ransomNote, magazine) {
-  // Write your solution here
+  if(ransomNote.length > magazine.length) return false;
+  else{
+    const freq = {};
+    for(let char of magazine){
+      freq[char] = (freq[char] || 0)+1;
+    }
+    for(let char of ransomNote){
+      if(!freq[char]) return false;
+      freq[char]--;
+    }
+  }
+  return true;
 }
 
 if (require.main === module) {
