@@ -13,8 +13,19 @@ var runners = require("..");
    * @return {boolean}
    */
   function ransomNote(ransomNote, magazine) {
-    // Write your solution here
+  const map = {};
+
+  for (let char of magazine) {
+    map[char] = (map[char] || 0) + 1;
   }
+
+  for (let char of ransomNote) {
+    if (!map[char]) return false;
+    map[char]--;
+  }
+
+  return true;
+}
 
 if (require.main === module) {
   runners.ransomNote(ransomNote);
