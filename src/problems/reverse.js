@@ -12,7 +12,15 @@ var runners = require("..");
  */
 function reverse(str) {
   // Write your solution here
-  console.log(str);
+  // let result="";
+  // for(let i=str.length-1;i>=0;i--){
+  //   result+=str[i];
+  // }
+  // console.log(str);
+  // return result;
+
+  return str.split("").reverse().join("");
+
 }
 
 if (require.main === module) {
