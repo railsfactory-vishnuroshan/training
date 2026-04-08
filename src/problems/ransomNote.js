@@ -18,7 +18,6 @@ function ransomNote(ransomNote, magazine) {
   for (let char of magazine) {
     count[char] = (count[char] || 0) + 1;
   }
-
   for (let char of ransomNote) {
     if (!count[char]) {
       return false;
