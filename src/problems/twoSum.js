@@ -14,6 +14,14 @@ var runners = require("..");
  */
 function twoSum(nums, target) {
   // Write your solution here
+  let res=new Map();
+  for(let i=0;i<nums.length;i++){
+    const complement=target-nums[i];
+    if(res.has(complement)){
+      return [res.get(complement),i];
+    }
+    res.set(nums[i],i);
+  }
 }
 
 if (require.main === module) {
