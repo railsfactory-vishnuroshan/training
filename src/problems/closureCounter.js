@@ -13,6 +13,21 @@ var runners = require("..");
  * @return {{ increment: Function, decrement: Function, reset: Function }}
  */
 function createCounter(n) {
+  let init=n;
+  return{
+    increment:function(){
+      n++;
+      return n;
+    },
+    decrement:function(){
+      n--;
+      return n;
+    },
+    reset:function(){
+      n=init;
+      return n;
+    }
+  }
   // Write your solution here
 }
 
