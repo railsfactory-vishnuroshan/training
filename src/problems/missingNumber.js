@@ -10,8 +10,14 @@ var runners = require("..");
  * @param {number[]} nums
  * @return {number}
  */
-function missingNumber(nums) {
+function missingNumber(nums){
   // Write your solution here
+  let set=new Set(nums);
+  for (let i=0;i<=nums.length;i++){
+    if(!set.has(i)){
+      return i;
+    }
+}
 }
 
 if (require.main === module) {

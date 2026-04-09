@@ -10,10 +10,17 @@ var runners = require("..");
  * @param {number[]} nums
  * @return {boolean}
  */
-function containsDuplicate(nums) {
+function containsDuplicate(nums){
   // Write your solution here
+  let map = {};
+  for (let num of nums){
+    if(map[num]){
+      return true;
+    }
+    map[num]= true;
+  }
+  return false;
 }
-
 if (require.main === module) {
   runners.containsDuplicate(containsDuplicate);
 }

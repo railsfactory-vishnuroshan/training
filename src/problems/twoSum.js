@@ -12,11 +12,18 @@ var runners = require("..");
  * @param {number} target
  * @return {number[]}
  */
-function twoSum(nums, target) {
+function twoSum(nums, target){
   // Write your solution here
+   let map = {};
+  for (let i=0;i<nums.length;i++){
+    let diff=target-nums[i];
+    if (diff in map) {
+      return [map[diff],i];
+    }
+    map[nums[i]]=i;
+  }
 }
-
-if (require.main === module) {
+if (require.main ===module){
   runners.twoSum(twoSum);
 }
 

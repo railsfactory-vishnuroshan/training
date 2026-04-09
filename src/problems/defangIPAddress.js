@@ -10,8 +10,9 @@ var runners = require("..");
  * @param {string} address
  * @return {string}
  */
-function defangIPAddress(address) {
+function defangIPAddress(address){
   // Write your solution here
+  return address.split('.').join('[.]');
 }
 
 if (require.main === module) {
