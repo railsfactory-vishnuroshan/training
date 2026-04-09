@@ -4,6 +4,10 @@
 
 const userIds = [101, 102, 103];
 
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}  
+
 async function processUsers() {
   //   userIds.forEach(async (id) => {
   for (let id of userIds) {

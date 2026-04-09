@@ -12,6 +12,13 @@ var runners = require("..");
  */
 function missingNumber(nums) {
   // Write your solution here
+
+  let x=nums.length;
+  for(let i=0;i<nums.length;i++){
+    x^=i;
+    x^=nums[i];
+  }
+  return x;
 }
 
 if (require.main === module) {
