@@ -11,10 +11,20 @@ var runners = require("..");
  * @param {number[]} nums
  * @return {number[]}
  */
-function productExceptSelf(nums) {
+function productExceptSelf(nums){
   // Write your solution here
+  let result = [];
+  for (let i=0;i<nums.length;i++){
+    let product=1;
+    for (let j=0;j<nums.length;j++){
+      if (i!==j){
+        product *=nums[j];
+      }
+    }
+    result.push(product);
+  }
+  return result;
 }
-
 if (require.main === module) {
   runners.productExceptSelf(productExceptSelf);
 }

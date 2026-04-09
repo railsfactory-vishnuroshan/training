@@ -10,3 +10,4 @@ const user = {
 };
 
 setTimeout(user.greet, 1000); // Expected output is "Alice"
+setTimeout(() => user.greet(), 1000);

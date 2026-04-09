@@ -14,8 +14,18 @@ var runners = require("..");
  */
 function ransomNote(ransomNote, magazine) {
   // Write your solution here
+ let map=new Map();
+  for(let char of magazine){
+    map.set(char,(map.get(char)||0)+1);
+  }
+  for(let char of ransomNote){
+    if(!map.get(char)){
+      return false;
+    }
+    map.set(char,map.get(char)-1);
+  }
+  return true;
 }
-
 if (require.main === module) {
   runners.ransomNote(ransomNote);
 }

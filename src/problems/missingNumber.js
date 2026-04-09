@@ -12,6 +12,12 @@ var runners = require("..");
  */
 function missingNumber(nums) {
   // Write your solution here
+  let set=new Set(nums);
+  for (let i=0;i<=nums.length;i++){
+    if(!set.has(i)){
+      return i;
+    }
+}
 }
 
 if (require.main === module) {

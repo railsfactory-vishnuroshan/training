@@ -12,6 +12,7 @@ var runners = require("..");
  */
 function reverse(str) {
   // Write your solution here
+  return str.split("").reverse().join("");
   console.log(str);
 }
 
