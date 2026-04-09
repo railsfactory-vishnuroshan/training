@@ -12,7 +12,13 @@ var runners = require("..");
  * @return {any[]}
  */
 function customFilter(arr, fn) {
-  // Write your solution here
+    const result = [];
+    for (let i=0; i<arr.length;i++){
+      if(fn(arr[i],i,arr)){
+        result.push(arr[i]);
+      }
+    }
+    return result;
 }
 
 if (require.main === module) {
