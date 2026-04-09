@@ -12,7 +12,7 @@ var runners = require("..");
  * @param {number} target
  * @return {number[]}
  */
-function twoSum(nums, target) {
+function twoSum(nums, target){
   // Write your solution here
    let map = {};
   for (let i=0;i<nums.length;i++){
