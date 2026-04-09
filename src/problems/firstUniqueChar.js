@@ -16,7 +16,7 @@ function firstUniqueChar(s) {
   for(const char of s){
     freq[char] =(freq[char]||0)+1;
   }
-  for(let i=0;s.length;i++){
+  for(let i=0;i<s.length;i++){
     if(freq[s[i]] === 1){
       return i;
     }
