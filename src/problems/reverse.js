@@ -11,8 +11,16 @@ var runners = require("..");
  * @return {string}
  */
 function reverse(str) {
-  // Write your solution here
-  console.log(str);
+  let String="";
+  for(let i=str.length-1;i>=0;i--){
+     String+=str[i];
+  }
+  return String;
+}
+
+if (require.main === module) {
+  runners.reverse(reverse);
+ 
 }
 
 if (require.main === module) {

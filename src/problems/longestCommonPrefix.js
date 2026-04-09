@@ -12,7 +12,23 @@ var runners = require("..");
  * @return {string}
  */
 function longestCommonPrefix(strs) {
-  // Write your solution here
+  if(strs.length===0)
+       return "";
+    strs.sort();
+    let left= strs[0];
+    let  right=strs[strs.length-1];
+    let val="";
+
+    for( let i=0;i<left.length;i++){
+      if(left.charAt(i)===right.charAt(i))
+        val+=left.charAt(i);
+      else{
+        break;
+      }
+
+    }
+
+ return val;
 }
 
 if (require.main === module) {
