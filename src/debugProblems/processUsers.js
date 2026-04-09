@@ -3,7 +3,7 @@
  */
 
 const userIds = [101, 102, 103];
-function wait(milliseconds){
+function wait(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve,milliseconds));
 }
 async function processUsers(){

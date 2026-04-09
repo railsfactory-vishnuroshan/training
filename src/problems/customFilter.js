@@ -13,9 +13,16 @@ var runners = require("..");
  */
 function customFilter(arr, fn) {
   // Write your solution here
+  let Result=[];
+  for (let i =0; i<arr.length;i++){
+    if (fn(arr[i],i,arr)){
+      Result.push(arr[i]);
+    }
+  }
+  return Result;
 }
 
-if (require.main === module) {
+if (require.main === module){
   runners.customFilter(customFilter);
 }
 
