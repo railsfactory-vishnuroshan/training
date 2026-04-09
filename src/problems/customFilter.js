@@ -13,6 +13,15 @@ var runners = require("..");
  */
 function customFilter(arr, fn) {
   // Write your solution here
+  let data = [];
+  for(let ind in arr)
+  {
+    if(fn(arr[ind]))
+    {
+      data.push(arr[ind]);
+    }
+  }
+  return data;
 }
 
 if (require.main === module) {

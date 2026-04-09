@@ -13,6 +13,24 @@ var runners = require("..");
  */
 function validAnagram(s, t) {
   // Write your solution here
+  if(s.length !== t.length)
+  {
+    return false;
+  }
+  let chrArr = new Uint8Array(256);
+  for( let ind in s)
+  {
+    chrArr[s[ind].charCodeAt(0)]++;
+    chrArr[t[ind].charCodeAt(0)]--;
+  }
+  for (let ind in chrArr)
+  {
+     if(chrArr[ind]!==0)
+     {
+       return false;
+     }
+  }
+  return true;
 }
 
 if (require.main === module) {

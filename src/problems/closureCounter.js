@@ -14,7 +14,21 @@ var runners = require("..");
  */
 function createCounter(n) {
   // Write your solution here
+  let count = n;
+  return {
+    increment() {
+      return ++count;
+    },
+    decrement(){
+      return --count;
+    },
+    reset(){
+      return count = n;
+    }
+  }
+
 }
+
 
 if (require.main === module) {
   runners.closureCounter(createCounter);
