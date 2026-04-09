@@ -20,7 +20,7 @@ function twoSum(nums, target) {
   for(let i=0;i<nums.length;i++){
     const carry = target - nums[i];
 
-    if(tab[carry] !== undefined){
+    if(tab.hasOwnProperty(carry)){
       return [tab[carry],i] ;
     }
     tab[nums[i]] = i;

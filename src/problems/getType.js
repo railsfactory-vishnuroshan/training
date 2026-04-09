@@ -13,7 +13,15 @@ var runners = require("..");
  */
 function getType(value) {
   // Write your solution here
+  if(value === null){
+    return "null";
+  }
+  if(Array.isArray(value)){
+    return "array";
+  }
+  return typeof value;
 }
+
 
 if (require.main === module) {
   runners.getType(getType);

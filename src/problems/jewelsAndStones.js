@@ -14,6 +14,19 @@ var runners = require("..");
  */
 function jewelsAndStones(jewels, stones) {
   // Write your solution here
+
+  const tab = {};
+  let count = 0;
+  for(let ch of jewels){
+    tab[ch]=true;
+  }
+  for(let ch of stones){
+    if(tab[ch]){
+      count++;
+    }
+  }
+  return count;
+
 }
 
 if (require.main === module) {
