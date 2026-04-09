@@ -13,6 +13,17 @@ var runners = require("..");
  */
 function firstUniqueChar(s) {
   // Write your solution here
+  let arr = new Array(256).fill(0);
+  for(let ch in s)
+  {
+    arr[s[ch].charCodeAt(0)]++;
+  }
+  for(let ind in s)
+  {
+    if(arr[s[ind].charCodeAt(0)]===1)
+      return parseInt(ind);
+  }
+  return -1;
 }
 
 if (require.main === module) {

@@ -12,6 +12,7 @@ var runners = require("..");
  */
 async function sleep(millis) {
   // Write your solution here
+  return new Promise(function (resolve) {setTimeout(() =>  {return resolve()} , millis)});
 }
 
 if (require.main === module) {

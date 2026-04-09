@@ -14,6 +14,32 @@ var runners = require("..");
  */
 function twoSum(nums, target) {
   // Write your solution here
+
+
+  for( let ind in nums)
+  {
+    let value = findvalue(Math.abs(target-nums[ind]), parseInt(ind), nums)
+    if(parseInt(value) !== -1)
+    {
+      return [parseInt(ind), parseInt(value)];
+    }
+  }
+  return [];
+}
+
+function findvalue(value, index, nums)
+{
+   for(let num in nums)
+   {
+     if(value === nums[num])
+     {
+       if(index !== parseInt(num))
+       {
+         return num;
+       }
+     }
+   }
+   return -1;
 }
 
 if (require.main === module) {
