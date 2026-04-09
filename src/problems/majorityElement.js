@@ -11,7 +11,16 @@ var runners = require("..");
  * @return {number}
  */
 function majorityElement(nums) {
-  // Write your solution here
+const countMap = {};
+  const threshold = Math.floor(nums.length / 2);
+
+  for (const num of nums) {
+    countMap[num] = (countMap[num] || 0) + 1;
+
+    if (countMap[num] > threshold) {
+      return num;
+    }
+  }
 }
 
 if (require.main === module) {

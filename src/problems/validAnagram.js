@@ -12,7 +12,21 @@ var runners = require("..");
  * @return {boolean}
  */
 function validAnagram(s, t) {
-  // Write your solution here
+  if (s.length !== t.length) return false;
+
+  const countMap = {};
+
+  for (const char of s) {
+    countMap[char] = (countMap[char] || 0) + 1;
+  }
+
+  for (const char of t) {
+    if (!countMap[char]) return false;
+
+    countMap[char]--;
+  }
+
+  return true;
 }
 
 if (require.main === module) {

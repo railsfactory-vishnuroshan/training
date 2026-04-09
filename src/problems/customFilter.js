@@ -12,8 +12,22 @@ var runners = require("..");
  * @return {any[]}
  */
 function customFilter(arr, fn) {
-  // Write your solution here
+
+  const result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    const shouldInclude = fn(element, i, arr);
+
+    if (!shouldInclude) continue; // Structural flattening
+
+    result.push(element);
+  }
+
+  return result;
+
 }
+
 
 if (require.main === module) {
   runners.customFilter(customFilter);
