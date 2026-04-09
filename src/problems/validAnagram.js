@@ -21,6 +21,7 @@ function validAnagram(s, t) {
   return false;
 }
 
+
 if (require.main === module) {
   runners.validAnagram(validAnagram);
 }

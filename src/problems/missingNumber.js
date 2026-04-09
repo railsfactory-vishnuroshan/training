@@ -22,6 +22,7 @@ function missingNumber(nums) {
   return sum-sum1;
 }
 
+
 if (require.main === module) {
   runners.missingNumber(missingNumber);
 }

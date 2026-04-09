@@ -30,6 +30,7 @@ function maxConsecutiveOnes(nums) {
   return max;
 }
 
+
 if (require.main === module) {
   runners.maxConsecutiveOnes(maxConsecutiveOnes);
 }
