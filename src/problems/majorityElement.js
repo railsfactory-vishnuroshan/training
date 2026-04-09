@@ -10,7 +10,7 @@ var runners = require("..");
  * @param {number[]} nums
  * @return {number}
  */
-function majorityElement(nums) {
+function majorityElement(nums){
   // Write your solution here
   let count =0;
   let candidate=null;

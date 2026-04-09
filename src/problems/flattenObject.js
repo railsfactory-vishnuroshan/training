@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {Object} obj
  * @return {Object}
  */
-function flattenObject(obj) {
+function flattenObject(obj){
   // Write your solution here
   let result={};
   function help(currentobj, currentpath){

@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {string} s
  * @return {number}
  */
-function firstUniqueChar(s) {
+function firstUniqueChar(s){
   // Write your solution here
   for (let i=0;i<s.length;i++){
     if(s.indexOf(s[i])===s.lastIndexOf(s[i])){

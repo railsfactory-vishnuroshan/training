@@ -22,7 +22,7 @@ function customFilter(arr, fn) {
   return Result;
 }
 
-if (require.main === module) {
+if (require.main === module){
   runners.customFilter(customFilter);
 }
 

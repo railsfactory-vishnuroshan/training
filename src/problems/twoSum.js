@@ -23,7 +23,7 @@ function twoSum(nums, target) {
     map[nums[i]]=i;
   }
 }
-if (require.main===module){
+if (require.main ===module) {
   runners.twoSum(twoSum);
 }
 

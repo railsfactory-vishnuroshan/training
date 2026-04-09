@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {string} s
  * @return {boolean}
  */
-function validPalindrome(s) {
+function validPalindrome(s){
   // Write your solution here
    let cleaned = s.toLowerCase().replace(/[^a-z0-9]/g, "");
   let left=0;

@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {string} t
  * @return {boolean}
  */
-function validAnagram(s, t) {
+function validAnagram(s,t){
   // Write your solution here
   if (s.length !==t.length) 
     return false;

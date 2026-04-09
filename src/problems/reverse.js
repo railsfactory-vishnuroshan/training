@@ -7,12 +7,12 @@ var runners = require("..");
  *
  * Example: reverse('hello') => 'olleh'
  *
- * @param {string} str
+ * @param {string}str
  * @return {string}
  */
-function reverse(str) {
+function reverse(str){
   // Write your solution here
-  return str.split("").reverse().join("");
+  return str.split("").reverse(). join("");
   console.log(str);
 }
 

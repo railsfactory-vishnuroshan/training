@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {any} value
  * @return {string}
  */
-function getType(value) {
+function getType(value){
   // Write your solution here
   if(value===null){
     return "null";

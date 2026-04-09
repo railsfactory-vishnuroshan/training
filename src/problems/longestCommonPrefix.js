@@ -11,7 +11,7 @@ var runners = require("..");
  * @param {string[]} strs
  * @return {string}
  */
-function longestCommonPrefix(strs) {
+function longestCommonPrefix(strs){
   // Write your solution here
   if (strs.length === 0){
     return "";

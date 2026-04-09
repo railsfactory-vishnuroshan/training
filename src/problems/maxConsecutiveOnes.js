@@ -18,7 +18,7 @@ function maxConsecutiveOnes(nums) {
     if(num===1){
       count++;
     maxcount=Math.max(maxcount,count);
-    }else{
+    } else {
       count=0;
     }
   }

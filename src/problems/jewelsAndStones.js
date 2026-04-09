@@ -12,7 +12,7 @@ var runners = require("..");
  * @param {string} stones
  * @return {number}
  */
-function jewelsAndStones(jewels, stones) {
+function jewelsAndStones(jewels, stones){
   // Write your solution here
   let map = {};
   let count = 0;
