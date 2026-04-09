@@ -12,6 +12,20 @@ var runners = require("..");
  */
 function maxConsecutiveOnes(nums) {
   // Write your solution here
+  let max = 0;
+  let cur =0;
+
+  for(let i=0;i<nums.length; i++){
+    if(nums[i] === 1){
+      cur++;
+      max = Math.max(cur,max);
+    }
+    else{
+      cur =0;
+    }
+  }
+  return max;
+
 }
 
 if (require.main === module) {
