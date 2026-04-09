@@ -11,8 +11,18 @@ var runners = require("..");
  * @param {number[]} nums
  * @return {number[]}
  */
-function productExceptSelf(nums) {
-  // Write your solution here
+function productExceptSelf(nums){
+  let arr=[];
+  for(let i=0;i<nums.length;i++){
+    let prod=1;
+    for(let j=0;j<nums.length;j++){
+      if(i!==j){
+          prod*=nums[j];
+      }
+    }
+    arr.push(prod);
+  }
+  return arr;
 }
 
 if (require.main === module) {

@@ -11,7 +11,9 @@ var runners = require("..");
  * @return {number}
  */
 function majorityElement(nums) {
-  // Write your solution here
+  nums.sort((a,b) => a-b);
+  let res = Math.floor(nums.length/2);
+  return nums[res];
 }
 
 if (require.main === module) {
