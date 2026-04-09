@@ -14,21 +14,6 @@ var runners = require("..");
  */
 function createCounter(n) {
   // Write your solution here
-  let c = n;
-  return {
-    increment: function() {
-      c++;
-      return c;
-    },
-    decrement: function() {
-      c--;
-      return c;
-    },
-    reset: function() {
-      c = n;
-      return c;
-    }
-  };
 }
 
 if (require.main === module) {
