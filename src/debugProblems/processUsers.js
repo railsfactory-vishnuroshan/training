@@ -3,8 +3,10 @@
  */
 
 const userIds = [101, 102, 103];
-
-async function processUsers() {
+function wait(milliseconds){
+  return new Promise((resolve) => setTimeout(resolve,milliseconds));
+}
+async function processUsers(){
   //   userIds.forEach(async (id) => {
   for (let id of userIds) {
     // Simulating a 1 second API call
