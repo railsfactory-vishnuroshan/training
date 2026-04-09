@@ -10,8 +10,9 @@ var runners = require("..");
  * @param {number} millis
  * @return {Promise<void>}
  */
+const pause =(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
 async function sleep(millis) {
-  // Write your solution here
+   await pause(millis);
 }
 
 if (require.main === module) {

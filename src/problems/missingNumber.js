@@ -11,7 +11,15 @@ var runners = require("..");
  * @return {number}
  */
 function missingNumber(nums) {
-  // Write your solution here
+    let n=nums.length;
+    let range=n*(n+1)/2;
+    let curr=0;
+    for(let num of nums)
+    {
+        curr+=num;
+    }
+
+return range-curr;
 }
 
 if (require.main === module) {

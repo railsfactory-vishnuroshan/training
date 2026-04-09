@@ -12,7 +12,8 @@ var runners = require("..");
  * @return {number}
  */
 function removeDuplicates(nums) {
-  // Write your solution here
+      
+      return  new Set(nums).size;
 }
 
 if (require.main === module) {

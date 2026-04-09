@@ -12,7 +12,14 @@ var runners = require("..");
  * @return {number}
  */
 function firstUniqueChar(s) {
-  // Write your solution here
+     for(let i=0;i<s.length;i++)
+     {
+       if(s.indexOf(s[i]) === s.lastIndexOf(s[i]))
+       {
+         return i;
+       }
+     }
+     return -1;
 }
 
 if (require.main === module) {

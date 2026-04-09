@@ -11,8 +11,13 @@ var runners = require("..");
  * @return {number}
  */
 function majorityElement(nums) {
-  // Write your solution here
-}
+    let map={};
+    for(let num of nums)
+    {
+        map[num]=(map[num] || 0)+1;
+        if(map[num] > nums.length/2) return num;
+    }
+};
 
 if (require.main === module) {
   runners.majorityElement(majorityElement);

@@ -13,7 +13,15 @@ var runners = require("..");
  * @return {boolean}
  */
 function ransomNote(ransomNote, magazine) {
-  // Write your solution here
+     for (const char of magazine)
+     {
+          if (ransomNote.includes(char)) 
+          {
+         ransomNote= ransomNote.replace(char,"");
+          }
+     }
+    return ransomNote.length===0;
+
 }
 
 if (require.main === module) {
