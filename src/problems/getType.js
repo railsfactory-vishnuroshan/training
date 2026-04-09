@@ -13,8 +13,6 @@ var runners = require("..");
  */
 function getType(value) {
   // Write your solution here
-  const rawType = Object.prototype.toString.call(value);
-  return rawType.slice(8, -1).toLowerCase();
 }
 
 if (require.main === module) {

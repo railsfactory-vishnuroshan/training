@@ -13,16 +13,6 @@ var runners = require("..");
  */
 function validPalindrome(s) {
   // Write your solution here
-  const str = s.toLowerCase().replace(/[^a-z0-9]/g, "").trim();
-  var a = 0, b = str.length-1;
-  while(a < b) {
-    if(str[a] != str[b]) {
-      return false;
-    }
-    a++;
-    b--;
-  }
-  return true;
 }
 
 if (require.main === module) {
